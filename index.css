@@ -1,0 +1,271 @@
+body {
+  margin: 0 auto;
+  font-family: "Smythe", cursive;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+/* typography */
+
+h1,
+h2 {
+  color: #fff;
+  font-weight: normal;
+}
+
+h3,
+.order-info h2,
+.price,
+.success-message p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.menu-item-descr-details {
+  font-size: 16px;
+  color: #8b8b8b;
+  margin: 10px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 39px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.order-info h2 {
+  color: #000;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.remove-item {
+  font-size: 12px;
+  color: #bbbbbb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 100ms ease-in-out;
+}
+
+.remove-item:hover {
+  color: #888888;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.remove-item:active {
+  transform: scale(0.95);
+}
+
+/* layout */
+
+header {
+  background-image: url("/diner-bg.png");
+  background-size: cover;
+  padding: 46px;
+}
+
+.container {
+  padding: 46px 46px 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 45px 0;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.menu-btn {
+  margin: 0 0 0 auto;
+  border: 1px solid #d2d2d2;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  background: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-btn::before {
+  content: "+";
+  position: absolute;
+  transform: translate(-49%, -54%);
+}
+
+.menu-btn:hover {
+  box-shadow: 0px 0px 3px #d2d2d2;
+}
+
+.menu-btn:active {
+  transform: scale(0.93);
+}
+
+.menu-emoji {
+  font-size: 80px;
+  line-height: 80px;
+  margin: 0;
+}
+
+/* order */
+
+.order {
+  display: block;
+}
+
+.order-info-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-info-details h3 {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.total {
+  border-top: 2px solid #393333;
+  padding: 14px 0 50px;
+  margin: 0;
+}
+
+.order-btn {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 18px 0;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: #16db99;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: all 0.1 ease-in-out;
+}
+
+.order-btn:hover {
+  background: #10b981;
+  box-shadow: 0 0 5px #d2d2d2;
+}
+
+.order-btn:active {
+  transform: scale(0.99);
+}
+
+/* modal */
+
+.modal {
+  /*display block when order is done*/
+  display: none;
+  max-width: 524px;
+  max-height: 542px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #fff;
+  filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
+}
+
+.modal-close-btn-container {
+  text-align: right;
+  margin: 0 9px;
+}
+
+.modal-close-btn {
+  font-size: 24px;
+  font-weight: 700px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #d2d2d2;
+  cursor: pointer;
+  transition: all 0.1 ease-in-out;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+}
+
+.modal-header {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 23px;
+}
+
+input,
+.submit-btn {
+  border: 1px solid #757575;
+  border-radius: 4px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, sans-serif;
+  padding: 13px 0 13px 25px;
+}
+
+.submit-btn {
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding-left: 0;
+  text-align: center;
+  background: #16db99;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.1 ease-in-out;
+}
+
+.submit-btn:hover {
+  background: #10b981;
+  box-shadow: 0 0 5px #d2d2d2;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* success message */
+
+.success-message {
+  /*display block when the order is completed*/
+  display: none;
+  max-width: 100%;
+  padding: 50px 0;
+  border: none;
+  border-radius: 3px;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
