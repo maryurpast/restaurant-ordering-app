@@ -81,6 +81,12 @@ header {
   padding: 46px 46px 0;
 }
 
+@media (max-width: 500px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
 .menu-item {
   display: flex;
   justify-content: flex-start;
@@ -88,6 +94,13 @@ header {
   gap: 30px;
   padding: 45px 0;
   border-bottom: 1px solid #d2d2d2;
+}
+
+@media (max-width: 330px) {
+  .menu-item {
+    gap: 10px;
+    padding: 30px 0;
+  }
 }
 
 .menu-btn {
@@ -98,8 +111,7 @@ header {
   font-weight: 200;
   background: #fff;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  padding: 20px;
   cursor: pointer;
   position: relative;
 }
@@ -120,8 +132,14 @@ header {
 
 .menu-emoji {
   font-size: 80px;
-  line-height: 80px;
   margin: 0;
+}
+
+@media (max-width: 500px) {
+  .menu-emoji {
+    font-size: 60px;
+    margin: 0;
+  }
 }
 
 /* order */
